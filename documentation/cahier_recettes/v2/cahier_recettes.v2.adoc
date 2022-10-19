@@ -1,0 +1,205 @@
+= Cahier de recette v3: DailyBank
+:toc: left
+:toc-title: Sommaire
+:toclevels: 5
+:numbered:
+:authors: Estival Ludovic | Beilkeiri Zakaria | Grasser James
+:appversion: 3.0
+:sectnums:
+:nofooter:
+
+Equipe : {authors} +
+Version 3, 12/06/2022
+
+== Introduction
+=== Objet
+
+Ce document a été produit dans le cadre d’un projet de création d’une application de gestion de comptes bancaires. Ce document spécifie l’ensemble des cas de test de l’application.
+
+<<<
+
+== Pre-requis
+=== Element à tester
+
+Les éléments testés concernent les users cases spécifiés dans la documentation technique.
+
+=== Environnement de test
+
+Ordinateur fixe ou portable.
+
+<<<
+
+== Cas de test
+
+=== Créer un compte
+|===
+|Cas de test | Test-01
+|Titre | Creation compte
+|Objectif | Vérifier la création d'un compte
+|===
+
+|===
+| ID | Action | Comportement | Résultat
+
+| 1 | Se connecter | L'application affiche l'accueil de l'employé. | ok 
+| 2 | Cliquer sur "Gestion" puis "Clients". | L'application affiche la fenêtre de gestion des clients. | ok 
+| 3 | Cliquer sur un client puis selectionner "Comptes client" | L'application affiche la fenêtre de gestion des comptes du client. | ok 
+| 4 | Cliquer sur un compte puis selectionner "Nouveau compte" | L'application affiche la fenêtre de création de compte. | ok 
+| 5 | Remplir les champs et selectionner "Ajouter" | Le compte a été créé et la fenêtre de création se ferme. | ok
+|===
+
+=== Clôturer un compte
+|===
+|Cas de test | Test-02
+|Titre | Cloture compte
+|Objectif | Vérifier la cloture d'un compte
+|===
+
+|===
+| ID | Action | Comportement | Résultat
+
+| 1 | Se connecter | L'application affiche l'accueil de l'employé. | ok 
+| 2 | Cliquer sur "Gestion" puis "Clients". | L'application affiche la fenêtre de gestion des clients. | ok 
+| 3 | Cliquer sur un client puis selectionner "Comptes client" | L'application affiche la fenêtre de gestion des comptes du client. | ok 
+| 4 | Cliquer sur un compte puis selectionner "Clôturer compte" | L'application affiche la fenêtre de cloture de compte. | ok 
+| 5 | Selectionner "Clôturer" | Le compte a été clôturé et la fenêtre de cloture se ferme. | ok
+|===
+
+=== Créditer un compte
+|===
+|Cas de test | Test-03
+|Titre | Créditer compte
+|Objectif | Vérifier le crédit d'un compte
+|===
+
+|===
+| ID | Action | Comportement | Résultat
+
+| 1 | Se connecter | L'application affiche l'accueil de l'employé. | ok 
+| 2 | Cliquer sur "Gestion" puis "Clients". | L'application affiche la fenêtre de gestion des clients. | ok 
+| 3 | Cliquer sur un client puis selectionner "Comptes client" | L'application affiche la fenêtre de gestion des comptes du client. | ok 
+| 4 | Cliquer sur un compte puis selectionner "Voir opérations" | L'application affiche la fenêtre des opérations du compte. | ok 
+| 5 | Selectionner "Enregistrer Crédit" | L'application affiche la fenêtre pour créditer un compte. | ok 
+| 6 | Remplir les champs et selectionner "Effectuer Crédit" | Le crédit a été effectué et la fenêtre pour créditer un compte se ferme. | ok
+|===
+
+=== Débiter un compte
+|===
+|Cas de test | Test-04
+|Titre | Débiter compte
+|Objectif | Vérifier le débit d'un compte
+|===
+
+|===
+| ID | Action | Comportement | Résultat
+
+| 1 | Se connecter | L'application affiche l'accueil de l'employé. | ok 
+| 2 | Cliquer sur "Gestion" puis "Clients". | L'application affiche la fenêtre de gestion des clients. | ok 
+| 3 | Cliquer sur un client puis selectionner "Comptes client" | L'application affiche la fenêtre de gestion des comptes du client. | ok 
+| 4 | Cliquer sur un compte puis selectionner "Voir opérations" | L'application affiche la fenêtre des opérations du compte. | ok 
+| 5 | Selectionner "Enregistrer Débit" | L'application affiche la fenêtre pour débiter un compte. | ok 
+| 6 | Remplir les champs et selectionner "Effectuer Débit" | Le débit a été effectué et la fenêtre pour débiter un compte se ferme. | ok
+|===
+
+=== Effectuer virement de compte à compte
+|===
+|Cas de test | Test-05
+|Titre | Virement compte à compte
+|Objectif | Vérifier le virement de compte à compte
+|===
+
+|===
+| ID | Action | Comportement | Résultat
+
+| 1 | Se connecter | L'application affiche l'accueil de l'employé. | ok 
+| 2 | Cliquer sur "Gestion" puis "Clients". | L'application affiche la fenêtre de gestion des clients. | ok 
+| 3 | Cliquer sur un client puis selectionner "Comptes client" | L'application affiche la fenêtre de gestion des comptes du client. | ok 
+| 4 | Cliquer sur un compte puis selectionner "Voir opérations" | L'application affiche la fenêtre des opérations du compte. | ok 
+| 5 | Selectionner "Faire un virement" | L'application affiche la fenêtre pour faire un virement de compte à compte. | ok 
+| 6 | Choisir un compte destinataire et selectionner "Effectuer virement" | Le virement a été effectué et la fenêtre pour faire un virement de compte à compte se ferme. | ok
+|===
+
+=== Créer un employé
+|===
+|Cas de test | Test-06
+|Titre | Création employé
+|Objectif | Vérifier la creation d'un employé
+|===
+
+|===
+| ID | Action | Comportement | Résultat
+
+| 1 | Se connecter | L'application affiche l'accueil de du chef d'agence. | ok 
+| 2 | Cliquer sur "Gestion" puis "Employés". | L'application affiche la fenêtre de gestion des employés. | ok 
+| 3 | Selectionner "Créer employé" | L'application affiche la fenêtre de création d'un employé. | ok 
+| 4 | Remplir les champs et selectionner "Ajouter" | L'employé a été créé et la fenêtre de creation d'un employé se ferme. | ok
+|===
+
+=== Modifier un employé
+|===
+|Cas de test | Test-07
+|Titre | Modifier employé
+|Objectif | Vérifier la modification d'un employé
+|===
+
+|===
+| ID | Action | Comportement | Résultat
+
+| 1 | Se connecter | L'application affiche l'accueil de du chef d'agence. | ok 
+| 2 | Cliquer sur "Gestion" puis "Employés". | L'application affiche la fenêtre de gestion des employés. | ok 
+| 3 | Cliquer sur un employé puis sélectionner "Modifier" | L'application affiche la fenêtre de modification d'un employé. | ok 
+| 4 | Remplir les champs et selectionner "Modifier" | L'employé a été modifié et la fenêtre de modification d'un employé se ferme. | ok
+|===
+
+=== Supprimer un employé
+|===
+|Cas de test | Test-08
+|Titre | Supprimer employé
+|Objectif | Vérifier la désactivation d'un employé
+|===
+
+|===
+| ID | Action | Comportement | Résultat
+
+| 1 | Se connecter | L'application affiche l'accueil de du chef d'agence. | ok 
+| 2 | Cliquer sur "Gestion" puis "Employés". | L'application affiche la fenêtre de gestion des employés. | ok 
+| 3 | Cliquer sur un employé puis sélectionner "Supprimer" | L'application affiche la fenêtre de désactivation d'un employé. | ok 
+| 4 | Selectionner "Ok" | L'employé a été désactivé et la fenêtre de désactivation d'un employé se ferme. | ok
+|===
+
+=== Générer un relevé de compte au format PDF
+|===
+|Cas de test | Test-09
+|Titre | Générer un relevé au format PDF
+|Objectif | Vérifier que la génération fonctionne
+|===
+
+|===
+| ID | Action | Comportement | Résultat
+
+| 1 | Se connecter | L'application affiche l'accueil du guichetier. | ok 
+| 2 | Cliquer sur "Gestion" puis "Clients". | L'application affiche la fenêtre de gestion des clients. | ok 
+| 3 | Cliquer sur un client puis sélectionner "Comptes client". | L'application affiche les comptes du client | ok 
+| 4 | Cliquer sur "Voir opérations". | L'application affiche les opérations du compte | ok
+| 5 | Cliquer sur "Générer un pdf" | L'application crée le pdf et confirme la création | ok
+| 6 | Cliquer "Ok" | Le pdf a été généré. | ok
+|===
+
+=== Gérer les prélèvements automatiques
+|===
+|Cas de test | Test-10
+|Titre | Gérer les prélèvements automatiques
+|Objectif | Vérifier que la gestion des prélèvements automatiques fontionne
+|===
+
+|===
+| ID | Action | Comportement | Résultat
+
+| 1 | Se connecter | L'application affiche l'accueil du guichetier. | ok 
+| 2 | Cliquer sur "Gestion" puis "Clients". | L'application affiche la fenêtre de gestion des clients. | ok 
+| 3 | Cliquer sur un client puis sélectionner "Comptes client". | L'application affiche les comptes du client | ok 
+| 4 | Cliquer sur "Voir opérations". | L'application affiche les opérations du compte | ok
+| 5 | Cliquer sur "Gérer les prélèvements" | L'application affiche la page de gestion des prélèvements auto | ok
+| 6 | Cliquer "Enregistrer prélèvements" | Le prélèvement a été créé. | ok
+| 7 | Cliquer sur un prélèvement dans la liste, et cliquer sur "Supprimer prélèvements" | Le prélèvement a été supprimé. | ok
+|===

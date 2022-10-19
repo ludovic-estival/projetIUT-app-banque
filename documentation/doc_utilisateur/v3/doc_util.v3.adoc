@@ -1,0 +1,499 @@
+= Documentation Utilisateur v3 : DailyBank
+:toc: left
+:toc-title: Sommaire
+:toclevels: 5
+:numbered:
+:authors: Estival Ludovic | Beilkeiri Zakaria | Grasser James
+:appversion: 3.0
+:sectnums:
+:nofooter:
+
+Equipe : {authors} +
+Version 3, 12/06/2022
+
+== Présentation générale
+
+DailyBank est une application de gestion de comptes bancaires. +
+Cette application permet de gérer des comptes bancaires pour des clients. +
+Elle permet aussi la gestion des employés dans une agence.
+
+Un guichetier enregistré dans l'application peut : +
+
+* Modifier les informations d'un client
+
+* Créer un nouveau client
+
+* Créer un nouveau compte
+
+* Consulter un compte
+
+* Clôturer un compte
+
+* Créditer/Débiter un compte
+
+Un chef d'agence enregistré dans l'application peut faire les mêmes actions qu'un guichetier et peut aussi : +
+
+* Rendre inactif un client
+- Cette fonctionnalité permet de mettre un client inactif si ce client ne s’est pas manifesté ou n’a pas effectué d’opérations sur son compte pendant 12 mois.
+
+* Créer un employé
+
+* Consulter les informations des employés
+
+* Modifier un employé
+
+* Supprimer un employé
+
+== Installation
+
+* link:https://github.com/IUT-Blagnac/sae2022-bank-1b2/raw/main/app/DailyBankV3.jar[Cliquer ici] pour télécharger le fichier .jar de notre application.
+
+* Une fois le jar installé, il est nécéssaire de link:https://github.com/IUT-Blagnac/sae2022-bank-1b2/raw/main/app/jre/jre1.8.0_321.zip[télécharger le JRE] pour pouvoir lancer l'application. Vous avez maintenant 2 fichiers : le .jar et le JRE.
+
+image::img/telechargements.jpg[]
+
+* Extraire les fichiers du fichier .zip à l'aide d'un logiciel de décompression de fichiers (WinRAR, 7-Zip, etc...).
+
+image::img/décompression.jpg[]
+
+* Il ne reste plus qu'à déplacer les fichiers décompressés dans le dossier "Java" dans "C:\Program Files\Java" dans votre explorateur de fichiers. +
+Si le dossier "Java" n'existe pas, il est nécéssaire de le créer. 
+
+image::img/déplacementFichiers.jpg[]
+
+* Double cliquer ou lancer simplement sur le fichier .jar pour ouvrir l'application.
+
+image::img/ouvrirJar.jpg[]
+
+== Fonctionnement
+=== Fonctionnalités générales
+==== Connexion
+
+* Cliquer sur "Connexion" en bas de l'application ou dans le menu "Utilisateur" en haut à gauche de l'application.
+
+image::img/connexion1.jpg[]
+
+* Cliquer sur "Valider" après avoir entré les informations de connexion.
+
+image::img/connexion2.jpg[]
+
+WARNING: Si les identifiants de connexion ne sont pas valides, un message d'erreur apparaît.
+
+==== Deconnexion
+
+* Cliquer sur "Deconnexion" en bas de l'application ou dans le menu "Utilisateur" en haut à gauche de l'application.
+
+image::img/deconnexion.jpg[]
+
+==== Obtenir de l'aide
+
+* Cliquer sur "Aide" dans le menu "?" en haut à gauche de l'application.
+
+image::img/aide.jpg[]
+
+==== Quitter l'application
+
+* Cliquer sur "Quitter" dans le menu "Utilisateur" en haut à gauche de l'application, ou simplement en cliquant sur la croix en haut à droite de l'application.
+
+image::img/quitter1.jpg[]
+
+* Une confirmation apparaît, cliquer sur "OK" pour confirmer la fermeture.
+
+image::img/quitter2.jpg[]
+
+=== Fonctionnalités pour les employés
+
+*[yellow]#/!\ Pour les fonctionnalités suivantes, il est nécéssaire d'être connecté (bouton connexion) sur l'application.#*
+
+==== Gestions des Clients
+===== Créer un nouveau client
+
+* Cliquer sur "Clients" dans le menu "Gestion" en haut à gauche de l'application.
+
+image::img/nouveauClient1.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Nouveau client" en bas à droite de la nouvelle fenêtre.
+
+image::img/nouveauClient2.jpg[]
+
+* La fenêtre de creation du client apparaît, remplir les champs et cliquer sur "Ajouter" en bas à droite de la fenêtre.
+
+image::img/nouveauClient3.jpg[]
+
+WARNING: Si un des champs n'est pas valable ou incomplet, un message d'erreur apparaît.
+
+===== Modifier informations client
+
+* Cliquer sur "Clients" dans le menu "Gestion" en haut à gauche de l'application.
+
+image::img/nouveauClient1.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Rechercher" en haut à droite de la nouvelle fenêtre. + 
+[green]#*_+++<u>Note :</u>+++_* Il est possible de rechercher un client en entrant son numéro, son nom, ou son prénom.#
+
+image::img/modifierClient2.jpg[]
+
+* La liste des clients apparaît, cliquer sur un client et cliquer sur "Modifier client".
+
+image::img/modifierClient3.jpg[]
+
+* La fenêtre de modification du client apparaît, modifier les champs et cliquer sur "Modifier" en bas à droite de la fenêtre.
+
+image::img/modifierClient4.jpg[]
+
+WARNING: Si un des champs n'est pas valable ou incomplet, un message d'erreur apparaît.
+
+==== Gestion des Comptes
+===== Créer un compte
+
+* Cliquer sur "Clients" dans le menu "Gestion" en haut à gauche de l'application.
+
+image::img/nouveauClient1.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Rechercher" en haut à droite de la nouvelle fenêtre. + 
+[green]#*_+++<u>Note :</u>+++_* Il est possible de rechercher un client en entrant son numéro, son nom, ou son prénom.#
+
+image::img/modifierClient2.jpg[]
+
+* La liste des clients apparaît, cliquer sur un client et cliquer sur "Comptes client".
+
+image::img/creerCompte3.jpg[]
+
+* La fenêtre de gestion des comptes du client apparaît, cliquer sur "Nouveau compte" en bas à droite de la fenêtre.
+
+image::img/creerCompte4.jpg[]
+
+* La fenêtre de creation d'un compte apparaît, remplir les champs et cliquer sur "Ajouter" en bas à droite de la fenêtre.
+
+image::img/creerCompte5.jpg[]
+
+WARNING: Si un des champs n'est pas valable ou incomplet, un message d'erreur apparaît.
+
+===== Consulter un compte
+
+* Cliquer sur "Clients" dans le menu "Gestion" en haut à gauche de l'application.
+
+image::img/nouveauClient1.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Rechercher" en haut à droite de la nouvelle fenêtre. + 
+[green]#*_+++<u>Note :</u>+++_* Il est possible de rechercher un client en entrant son numéro, son nom, ou son prénom.#
+
+image::img/modifierClient2.jpg[]
+
+* La liste des clients apparaît, cliquer sur un client et cliquer sur "Comptes client".
+
+image::img/creerCompte3.jpg[]
+
+* La fenêtre de gestion des comptes du client apparaît, cliquer sur un compte et cliquer sur "Voir opérations" en haut à droite de la fenêtre.
+
+image::img/consulterCompte4.jpg[]
+
+===== Modifier un compte
+
+* Cliquer sur "Clients" dans le menu "Gestion" en haut à gauche de l'application.
+
+image::img/nouveauClient1.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Rechercher" en haut à droite de la nouvelle fenêtre. + 
+[green]#*_+++<u>Note :</u>+++_* Il est possible de rechercher un client en entrant son numéro, son nom, ou son prénom.#
+
+image::img/modifierClient2.jpg[]
+
+* La liste des clients apparaît, cliquer sur un client et cliquer sur "Comptes client".
+
+image::img/creerCompte3.jpg[]
+
+* La fenêtre de gestion des comptes du client apparaît, cliquer sur un compte et cliquer "Modifier compte" à droite de la fenêtre.
+
+image::img/modifCompte4.jpg[]
+
+* La fenêtre de modification du compte apparaît, modifier les champs et cliquer sur "Modifier" à droite de la fenêtre.
+
+image::img/modifCompte5.jpg[]
+
+WARNING: Si un des champs n'est pas valable ou incomplet, un message d'erreur apparaît.
+
+===== Clôturer un compte
+
+[green]#*_+++<u>Note :</u>+++_* Pour clôturer un compte, il est nécessaire que son solde soit à 0.#
+
+* Cliquer sur "Clients" dans le menu "Gestion" en haut à gauche de l'application.
+
+image::img/nouveauClient1.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Rechercher" en haut à droite de la nouvelle fenêtre. + 
+[green]#*_+++<u>Note :</u>+++_* Il est possible de rechercher un client en entrant son numéro, son nom, ou son prénom.#
+
+image::img/modifierClient2.jpg[]
+
+* La liste des clients apparaît, cliquer sur un client et cliquer sur "Comptes client".
+
+image::img/creerCompte3.jpg[]
+
+* La fenêtre de gestion des comptes du client apparaît, cliquer sur un compte et cliquer "Clôturer compte" à droite de la fenêtre.
+
+image::img/suprCompte4.jpg[]
+
+* La fenêtre de clôture du compte apparaît, cliquer sur "Clôturer" en bas à droite de la fenêtre.
+
+image::img/suprCompte5.jpg[]
+
+WARNING: Le solde du compte doit être à 0 pour pouvoir le clôturer.
+
+===== [[bookmark-a]] Créditer/débiter un compte
+
+* Cliquer sur "Clients" dans le menu "Gestion" en haut à gauche de l'application.
+
+image::img/nouveauClient1.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Rechercher" en haut à droite de la nouvelle fenêtre. + 
+[green]#*_+++<u>Note :</u>+++_* Il est possible de rechercher un client en entrant son numéro, son nom, ou son prénom.#
+
+image::img/modifierClient2.jpg[]
+
+* La liste des clients apparaît, cliquer sur un client et cliquer sur "Comptes client".
+
+image::img/creerCompte3.jpg[]
+
+* La fenêtre de gestion des comptes du client apparaît, cliquer sur un compte et cliquer sur "Voir opérations" en haut à droite de la fenêtre.
+
+image::img/consulterCompte4.jpg[]
+
+* La fenêtre de consultation du compte apparaît, cliquer sur "Enregistrer Débit"/"Enregistrer Crédit".
+
+image::img/voirOpe5.jpg[]
+
+* Une nouvelle fenêtre apparaît, remplir les champs et cliquer sur "Effectuer Débit"/"Effectuer Crédit".
+
+image::img/voirOpe6.jpg[]
+
+WARNING: Il est important que le compte ne soit pas cloturé pour pouvoir faire cela.
+
+===== Effectuer un virement de compte à compte
+
+* Cliquer sur "Clients" dans le menu "Gestion" en haut à gauche de l'application.
+
+image::img/nouveauClient1.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Rechercher" en haut à droite de la nouvelle fenêtre. + 
+[green]#*_+++<u>Note :</u>+++_* Il est possible de rechercher un client en entrant son numéro, son nom, ou son prénom.#
+
+image::img/modifierClient2.jpg[]
+
+* La liste des clients apparaît, cliquer sur un client et cliquer sur "Comptes client".
+
+image::img/creerCompte3.jpg[]
+
+* La fenêtre de gestion des comptes du client apparaît, cliquer sur un compte et cliquer sur "Voir opérations" en haut à droite de la fenêtre.
+
+image::img/consulterCompte4.jpg[]
+
+* La fenêtre de consultation du compte apparaît, cliquer sur "Faire un virement". 
+
+image::img/virement5.jpg[]
+
+* Une nouvelle fenêtre apparaît, choisir le compte destinataire, choisir le montant et cliquer sur "Effectuer virement".
+
+image::img/virement6.jpg[]
+
+WARNING: Il est impossible de faire un virement à un compte cloturé.
+
+===== Générer un relevé de compte au format PDF
+
+* Cliquer sur "Clients" dans le menu "Gestion" en haut à gauche de l'application.
+
+image::img/nouveauClient1.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Rechercher" en haut à droite de la nouvelle fenêtre. + 
+[green]#*_+++<u>Note :</u>+++_* Il est possible de rechercher un client en entrant son numéro, son nom, ou son prénom.#
+
+image::img/modifierClient2.jpg[]
+
+* La liste des clients apparaît, cliquer sur un client et cliquer sur "Comptes client".
+
+image::img/creerCompte3.jpg[]
+
+* La fenêtre de gestion des comptes du client apparaît, cliquer sur un compte et cliquer sur "Voir opérations" en haut à droite de la fenêtre.
+
+image::img/consulterCompte4.jpg[]
+
+* Cliquer sur le bouton "Génerer un pdf"
+
+image::img/pdf5.jpg[]
+
+* Une fenêtre confirme la création du pdf, cliquer sur OK
+
+image::img/pdf6.jpg[]
+
+===== Gérer les prélèvements automatiques
+
+* Cliquer sur "Clients" dans le menu "Gestion" en haut à gauche de l'application.
+
+image::img/nouveauClient1.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Rechercher" en haut à droite de la nouvelle fenêtre. + 
+[green]#*_+++<u>Note :</u>+++_* Il est possible de rechercher un client en entrant son numéro, son nom, ou son prénom.#
+
+image::img/modifierClient2.jpg[]
+
+* La liste des clients apparaît, cliquer sur un client et cliquer sur "Comptes client".
+
+image::img/creerCompte3.jpg[]
+
+* La fenêtre de gestion des comptes du client apparaît, cliquer sur un compte et cliquer sur "Voir opérations" en haut à droite de la fenêtre.
+
+image::img/consulterCompte4.jpg[]
+
+* La fenêtre de consultation du compte apparaît, cliquer sur "Gérer les prélèvements" en bas à droite.
+
+image::img/prelevements5.jpg[]
+
+=== Fonctionnalités supplémentaires pour le chef d'agence
+
+*[yellow]#/!\ Pour les fonctionnalités suivantes, il est nécéssaire d'être connecté (bouton connexion) sur l'application +++<u>et d'être chef d'agence.</u>+++#*
+
+==== Gestions des Clients
+===== Rendre inactif un client
+
+* Cliquer sur "Clients" dans le menu "Gestion" en haut à gauche de l'application.
+
+image::img/rendreInactif1.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Rechercher" en haut à droite de la nouvelle fenêtre. + 
+[green]#*_+++<u>Note :</u>+++_* Il est possible de rechercher un client en entrant son numéro, son nom, ou son prénom.#
+
+image::img/modifierClient2.jpg[]
+
+* Cliquer sur un client et cliquer sur "Désactiver client" en bas à droite de la fenêtre.
+
+[red]#*_+++<u>Attention :</u>+++_* Pour permettre la désactivation d'un client, il est nécéssaire que tous ses comptes soient cloturés.#
+
+image::img/rendreInactif3.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Rendre inactif" en bas de la fenêtre.
+
+image::img/rendreInactif4.jpg[]
+
+WARNING: Pour pouvoir désactiver un client, il est necssaire que tous ses comptes soient à 0.
+
+==== Gestions des comptes
+===== Faire un débit exceptionnel
+
+Cette fonctionnalité est un cas particulier de la fonctionnalité "débiter un compte"
+
+* Suivre la procédure pour link:#bookmark-a[débiter un compte]
+
+* Si un débit fait dépasser le seuil de dépassement autorisé, une confirmation est affichée
+
+image::img/debitExceptionnel.jpg[]
+
+===== Faire une simulation d'emprunt
+
+* Cliquer sur "Clients" dans le menu "Gestion" en haut à gauche de l'application.
+
+image::img/nouveauClient1.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Rechercher" en haut à droite de la nouvelle fenêtre. + 
+[green]#*_+++<u>Note :</u>+++_* Il est possible de rechercher un client en entrant son numéro, son nom, ou son prénom.#
+
+image::img/modifierClient2.jpg[]
+
+* La liste des clients apparaît, cliquer sur "Simulation d'emprunt".
+
+image::img/emprunt3.jpg[]
+
+* Remplir les champs en haut de la fenêtre et cliquer sur "Simuler l'emprunt"
+
+image::img/emprunt6.jpg[]
+
+* La simulation d'emprunt est affichée mois par mois sous forme d'un tableau au milieu de la fenêtre.
+
+image::img/emprunt7.jpg[]
+
+===== Faire une simulation d'assurance d'emprunt
+
+* Cliquer sur "Clients" dans le menu "Gestion" en haut à gauche de l'application.
+
+image::img/nouveauClient1.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Rechercher" en haut à droite de la nouvelle fenêtre. + 
+[green]#*_+++<u>Note :</u>+++_* Il est possible de rechercher un client en entrant son numéro, son nom, ou son prénom.#
+
+image::img/modifierClient2.jpg[]
+
+* La liste des clients apparaît, cliquer sur "Simulation d'emprunt".
+
+image::img/emprunt3.jpg[]
+
+* Remplir le champ en bas de la fenêtre et cliquer sur "Simulation assurance"
+
+WARNING: Il est nécessaire d'avoir fait une simulation d'emprunt au préalable pour pouvoir faire une simulation d'assurance.
+
+image::img/assurance6.jpg[]
+
+* La simulation d'assurance affiche une nouvelle fenêtre avec les informations de la simulation
+
+image::img/assurance7.jpg[]
+
+==== Gestions des Employés
+===== Creer un employé
+
+* Cliquer sur "Employés" dans le menu "Gestion" en haut à gauche de l'application.
+
+image::img/creerEmploye1.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Créer employé" à droite de la fenêtre.
+
+image::img/creerEmploye2.jpg[]
+
+* La fenêtre de création d'un client apparaît, remplir les champs et cliquer sur "Ajouter" en bas de la fenêtre.
+
+image::img/creerEmploye3.jpg[]
+
+WARNING: Si un des champs n'est pas valable ou incomplet, un message d'erreur apparaît.
+
+===== Modifier un employé
+
+* Cliquer sur "Employés" dans le menu "Gestion" en haut à gauche de l'application.
+
+image::img/creerEmploye1.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Rechercher" en haut à droite de la nouvelle fenêtre. + 
+[green]#*_+++<u>Note :</u>+++_* Il est possible de rechercher un employé en entrant son numéro, son nom, ou son prénom.#
+
+image::img/modifEmploye2.jpg[]
+
+* Cliquer sur un employé et cliquer sur "Modifier" à droite de la fenêtre.
+
+image::img/modifEmploye3.jpg[]
+
+* La fenêtre de modification d'un client apparaît, remplir les champs et cliquer sur "Modifier" en bas de la fenêtre.
+
+image::img/modifEmploye4.jpg[]
+
+WARNING: Si un des champs n'est pas valable ou incomplet, un message d'erreur apparaît.
+
+===== Supprimer un employé
+
+* Cliquer sur "Employés" dans le menu "Gestion" en haut à gauche de l'application.
+
+image::img/creerEmploye1.jpg[]
+
+* Une nouvelle fenêtre apparaît, cliquer sur "Rechercher" en haut à droite de la nouvelle fenêtre. + 
+[green]#*_+++<u>Note :</u>+++_* Il est possible de rechercher un employé en entrant son numéro, son nom, ou son prénom.#
+
+image::img/modifEmploye2.jpg[]
+
+* Cliquer sur un employé et cliquer sur "Supprimer" à droite de la fenêtre.
+
+image::img/suprEmploye3.jpg[]
+
+* Une fenêtre de confirmation apparaît, cliquer sur "OK" pour confirmer la désactivation de l'employé.
+
+image::img/suprEmploye4.jpg[]
+
+=== Fonctionnalités automatiques
+==== Gestions des comptes
+===== Executer les prélèvements automatiques
+
+* Chaque jour à minuit, les prélèvementss automatiques sont exécutés.
