@@ -99,4 +99,4 @@ image:./gestion_projet/Gantt/gant.v3.png[]
 |         | `jar` projet |  https://github.com/IUT-Blagnac/sae2022-bank-1b2/raw/main/app/DailyBankV3.jar[Lien] |
 |===
 
-== 1 - Description du projet
+== 4 - Compétences
