@@ -99,4 +99,18 @@ image:./gestion_projet/Gantt/gant.v3.png[]
 |         | `jar` projet |  https://github.com/IUT-Blagnac/sae2022-bank-1b2/raw/main/app/DailyBankV3.jar[Lien] |
 |===
 
-== 4 - Compétences
+== 4 - Technologies
+
+L'application est codée avec JavaFX. Plus de détails https://github.com/ludovic-estival/projetIUT-app-banque/blob/main/documentation/doc_technique/v3/doc_tech.v3.adoc[ici].
+
+== 5 - Résultats
+
+Dans le cahier des charges l'application a 3 version différentes. Nous avons atteint la version 3, avec quelques fonctionnalités non implémentées par manque de temps.
+
+== 6 - Compétences
+
+Compétences développées:
+
+* Travail d'équipe
+* Gestion de projet
+* 
